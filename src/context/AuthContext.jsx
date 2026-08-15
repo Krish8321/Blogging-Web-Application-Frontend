@@ -90,6 +90,8 @@ export const AuthProvider = ({ children }) => {
         username,
         displayName,
       });
+      console.log("Gmail services under construction so use this temporary methode");
+      console.log("🔐 Development OTP:", response.data.otp);
       return { success: true, message: response.data?.message || "Verification email sent" };
     } catch (error) {
       const msg = error.response?.data?.message || error.response?.data?.error || "Registration failed";

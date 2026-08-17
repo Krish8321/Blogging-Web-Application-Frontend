@@ -202,10 +202,10 @@ export default function Profile() {
     const payload = {};
     if (editForm.displayName) payload.displayName = editForm.displayName;
     payload.bio = editForm.bio;
-    payload.avatarUrl = editForm.avatarUrl || null;
-    payload.website = editForm.website || null;
-    payload.github = editForm.github || null;
-    payload.linkedin = editForm.linkedin || null;
+    payload.avatarUrl = editForm.avatarUrl || undefined;
+    payload.website = editForm.website || undefined;
+    payload.github = editForm.github || undefined;
+    payload.linkedin = editForm.linkedin || undefined;
     payload.isPrivate = editForm.isPrivate;
 
     const result = await updateProfile(payload);
